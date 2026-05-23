@@ -6,6 +6,8 @@ A **luxury hotel operating system**, not a marketing site. Layout fidelity follo
 
 ## Directory structure
 
+Application root = repository root (Vercel standard deploy).
+
 ```
 src/
 ├── app/

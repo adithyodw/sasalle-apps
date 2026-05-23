@@ -1,37 +1,61 @@
-# SASALLE APPS
+# SASALLE HOTEL — Luxury Digital Hospitality System
 
-Monorepo for **SASALLE HOTEL** — ultra-luxury hospitality digital ecosystem (Batam, Indonesia).
+Production Next.js platform for **SASALLE HOTEL**, Batam, Indonesia — ultra-luxury hospitality OS rebuilt from Google Stitch designs.
 
-## Repository structure
-
-| Path | Description |
-|------|-------------|
-| `sasalle-hotel/` | **Production Next.js application** (deploy this to Vercel) |
-| `l_architecte/` | L'Architecte design system tokens |
-| `sasalle_home/` | Google Stitch reference — home |
-| `rooms_suites_gallery/` | Stitch reference — rooms |
-| `spa_wellness_sanctuary/` | Stitch reference — spa |
-| `the_brick_iron_dining/` | Stitch reference — dining |
+**Live deploy:** Connect this repo root to Vercel (standard Next.js — no subdirectory required).
 
 ## Quick start
 
 ```bash
-cd sasalle-hotel
 cp .env.example .env.local
 npm install
 npm run dev
 ```
 
-## Deploy to Vercel
+Open [http://localhost:3000](http://localhost:3000)
 
-1. Push this repository to GitHub: `https://github.com/adithyodw/sasalle-apps`
-2. Import project in [Vercel](https://vercel.com/new)
-3. Set **Root Directory** to `sasalle-hotel`
-4. Add environment variables from `sasalle-hotel/.env.example`
-5. Deploy — `npm run build` must pass (verified locally)
+## Deploy to Vercel (standard GitHub integration)
 
-See [`sasalle-hotel/README.md`](sasalle-hotel/README.md) and [`sasalle-hotel/docs/DEPLOYMENT.md`](sasalle-hotel/docs/DEPLOYMENT.md) for full instructions.
+1. Import `adithyodw/sasalle-apps` on [vercel.com/new](https://vercel.com/new)
+2. **Root Directory:** leave as `.` (repository root)
+3. Framework: **Next.js** (auto-detected)
+4. Add environment variables from `.env.example`
+5. Deploy
+
+See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for details.
+
+## Routes
+
+| Path | Description |
+|------|-------------|
+| `/` | Home |
+| `/rooms` | Rooms & Suites |
+| `/spa` | Spa Sanctuary |
+| `/dining` | The Brick & Iron |
+| `/book` | Booking + WhatsApp concierge |
+| `/stay/*` | Guest app (key, concierge, loyalty) |
+| `/admin` | Operations dashboard |
+
+Locales: `/id/...`, `/zh/...`
+
+## Repository layout
+
+| Path | Description |
+|------|-------------|
+| `src/` | Next.js application |
+| `messages/` | i18n (EN, ID, ZH) |
+| `docs/` | Architecture, deployment, UX flows |
+| `l_architecte/` | Design system tokens |
+| `sasalle_home/`, `rooms_suites_gallery/`, etc. | Google Stitch reference HTML |
+
+## Build
+
+```bash
+npm run build
+```
+
+Must pass before production deploy.
 
 ## Build specification
 
-Product requirements and design rules: [`docs/BUILD_SPEC.md`](docs/BUILD_SPEC.md)
+[`docs/BUILD_SPEC.md`](docs/BUILD_SPEC.md)

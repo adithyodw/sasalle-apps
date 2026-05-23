@@ -46,7 +46,7 @@ From Google Stitch design reference:
 - Minimal bottom navigation
 - Concierge-like experience
 
-## System features (implemented in `sasalle-hotel/`)
+## System features (implemented at repository root)
 
 - Booking: availability, seasonal pricing, packages, promo, cancellation UI
 - Guest: pre-arrival prefs, concierge (AI + human), transfer/dining/housekeeping
@@ -63,7 +63,7 @@ From Google Stitch design reference:
 ## Deployment
 
 - GitHub: `https://github.com/adithyodw/sasalle-apps`
-- Vercel: root directory `sasalle-hotel`, production build passing
+- Vercel: repository root (standard Next.js deploy), production build passing
 - `.env.example` included
 
 ## Copy tone
