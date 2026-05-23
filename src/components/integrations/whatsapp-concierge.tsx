@@ -38,7 +38,7 @@ export function WhatsAppConcierge({
         variant === "ghost" && tone === "dark" &&
           "border border-on-primary-container/40 text-on-primary hover:border-on-primary",
         variant !== "ghost" &&
-          "border border-clay bg-surface-container-low text-primary hover:border-primary",
+          "border border-clay/40 bg-surface-muted text-charcoal hover:border-brick",
         className,
       )}
     >

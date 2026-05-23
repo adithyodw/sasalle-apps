@@ -1,13 +1,13 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Bodoni_Moda, Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const bodoni = Bodoni_Moda({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-bodoni",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -42,14 +42,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${bodoni.variable} ${inter.variable}`}>
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
+      <body className="bg-surface text-on-surface">
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

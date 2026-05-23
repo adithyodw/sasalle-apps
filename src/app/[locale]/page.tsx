@@ -3,9 +3,9 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { HeroSection } from "@/components/home/hero-section";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { Button } from "@/components/ui/button";
+import { LuxuryImage } from "@/components/ui/luxury-image";
 import { Link } from "@/i18n/navigation";
 import { images } from "@/lib/design-tokens";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 export default async function HomePage() {
@@ -18,21 +18,23 @@ export default async function HomePage() {
   ];
 
   return (
-    <AppShell>
-      <main className="overflow-x-hidden pt-0">
+    <AppShell navVariant="transparent">
+      <main className="overflow-x-hidden">
         <HeroSection established={t("established")} title={t("heroTitle")} />
 
-        <section className="px-margin py-32">
-          <div className="mx-auto flex max-w-[1440px] flex-col gap-gutter md:flex-row">
-            <div className="mb-16 md:mb-0 md:w-1/3">
-              <p className="font-label-caps mb-6 text-outline">{t("section01")}</p>
-              <h3 className="font-display mb-8 text-[32px] leading-snug text-primary">
+        <section className="section-pad px-margin bg-surface">
+          <div className="mx-auto grid max-w-[1280px] gap-16 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <p className="font-label-caps text-smoke">{t("section01")}</p>
+              <h3 className="font-editorial mt-6 text-[36px] text-charcoal md:text-[44px]">
                 {t("ritualTitle")}
               </h3>
-              <div className="mb-8 h-px w-12 bg-primary" />
-              <p className="max-w-xs text-body-md text-on-surface-variant">{t("ritualBody")}</p>
+              <div className="hairline mt-8 w-16" />
+              <p className="mt-8 max-w-sm text-[16px] leading-[1.8] text-on-surface-variant">
+                {t("ritualBody")}
+              </p>
             </div>
-            <div className="grid grid-cols-1 items-start gap-8 md:w-2/3 md:grid-cols-2">
+            <div className="grid gap-12 lg:col-span-8 lg:grid-cols-2">
               <EditorialCard
                 image={images.materialHonesty}
                 imageAlt="Material textures"
@@ -52,74 +54,80 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section className="relative bg-primary-container py-32 clay-breeze-pattern">
-          <div className="mx-auto max-w-[1440px] px-margin text-center">
-            <h3 className="font-display mb-8 text-[48px] tracking-tighter text-on-primary md:text-[64px]">
+        <section className="relative overflow-hidden bg-charcoal section-pad">
+          <div className="absolute inset-0 clay-breeze-pattern" />
+          <div className="relative mx-auto max-w-[720px] px-margin text-center">
+            <h3 className="font-editorial text-[40px] text-ivory md:text-[56px]">
               {t("stillnessTitle")}
             </h3>
-            <Link href="/rooms">
-              <Button variant="brick">{t("discoverRooms")}</Button>
+            <p className="mx-auto mt-6 max-w-md text-[15px] leading-relaxed text-smoke">
+              {t("stillnessSub")}
+            </p>
+            <Link href="/rooms" className="mt-12 inline-block">
+              <Button variant="ivory">{t("discoverRooms")}</Button>
             </Link>
           </div>
         </section>
 
-        <section className="bg-surface-container-low px-margin py-32">
-          <div className="mx-auto max-w-[1440px]">
-            <p className="font-label-caps mb-16 text-center text-outline">{t("curated")}</p>
-            <div className="grid grid-cols-1 gap-gutter md:grid-cols-12">
+        <section className="section-pad px-margin bg-surface-elevated">
+          <div className="mx-auto max-w-[1280px]">
+            <p className="font-label-caps text-center text-smoke">{t("curated")}</p>
+            <div className="mt-16 grid gap-8 lg:grid-cols-12">
               <Link
                 href="/spa"
-                className="group relative h-[500px] overflow-hidden bg-surface-container-highest md:col-span-8"
+                className="group relative min-h-[480px] overflow-hidden bg-charcoal lg:col-span-8"
               >
-                <Image
+                <LuxuryImage
                   src={images.sanctuary}
                   alt="Spa sanctuary"
                   fill
-                  className="object-cover opacity-80 mix-blend-multiply transition-transform duration-1000 group-hover:scale-105"
+                  className="luxury-transition group-hover:scale-[1.02] opacity-85"
+                  sizes="(max-width: 1024px) 100vw, 66vw"
                 />
-                <div className="absolute inset-0 flex flex-col justify-end p-12">
-                  <h4 className="font-display mb-4 text-[48px] text-primary-fixed">
-                    {t("sanctuary")}
-                  </h4>
-                  <p className="max-w-sm text-body-lg text-on-primary-fixed">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-10 md:p-14">
+                  <h4 className="font-editorial text-[40px] text-ivory">{t("sanctuary")}</h4>
+                  <p className="mt-4 max-w-md text-[15px] leading-relaxed text-smoke">
                     {t("sanctuaryBody")}
                   </p>
                 </div>
               </Link>
               <Link
                 href="/dining"
-                className="group relative flex h-[500px] flex-col items-center justify-center overflow-hidden bg-secondary-container p-10 text-center md:col-span-4"
+                className="group flex min-h-[480px] flex-col justify-end border border-clay/20 bg-ivory p-10 lg:col-span-4"
               >
-                <span className="material-symbols-outlined mb-6 text-5xl text-secondary">
-                  restaurant
-                </span>
-                <h4 className="font-display mb-4 text-[24px] text-secondary">{t("dining")}</h4>
-                <p className="text-body-md text-on-secondary-container">{t("diningBody")}</p>
-                <span className="font-label-caps mt-8 cursor-pointer border-b border-secondary pb-1 text-secondary">
-                  {t("viewMenu")}
+                <span className="font-label-caps text-hijau">{t("dining")}</span>
+                <h4 className="font-editorial mt-4 text-[32px] text-charcoal">
+                  The Brick & Iron
+                </h4>
+                <p className="mt-4 text-[15px] leading-relaxed text-on-surface-variant">
+                  {t("diningBody")}
+                </p>
+                <span className="font-label-caps mt-10 text-brick luxury-transition group-hover:text-gold">
+                  {t("viewMenu")} →
                 </span>
               </Link>
             </div>
           </div>
         </section>
 
-        <section className="px-margin py-32">
+        <section className="section-pad px-margin">
           <div className="mx-auto max-w-2xl">
-            <h3 className="font-display mb-16 text-center text-[32px] italic text-primary">
+            <h3 className="font-editorial text-center text-[32px] italic text-charcoal">
               {t("principles")}
             </h3>
-            <ul className="divide-y divide-outline-variant/30">
+            <ul className="mt-16">
               {principles.map((p) => (
-                <li key={p.num} className="group cursor-pointer py-12">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-8">
-                      <span className="font-label-caps text-outline">{p.num}</span>
-                      <h5 className="font-display text-[24px] text-on-surface transition-colors group-hover:text-primary">
+                <li key={p.num} className="group border-t border-clay/20 py-10">
+                  <div className="flex items-center justify-between gap-6">
+                    <div className="flex items-baseline gap-8">
+                      <span className="font-label-caps text-smoke">{p.num}</span>
+                      <h5 className="font-editorial text-[26px] text-charcoal luxury-transition group-hover:text-brick">
                         {p.label}
                       </h5>
                     </div>
-                    <span className="material-symbols-outlined text-outline transition-transform group-hover:translate-x-2">
-                      arrow_forward
+                    <span className="text-gold opacity-0 luxury-transition group-hover:opacity-100">
+                      →
                     </span>
                   </div>
                 </li>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LuxuryImage } from "@/components/ui/luxury-image";
 import { cn } from "@/lib/utils";
 
 export function EditorialCard({
@@ -17,25 +17,22 @@ export function EditorialCard({
   offset?: boolean;
 }) {
   return (
-    <article
-      className={cn(
-        "overflow-hidden border border-outline-variant/10 bg-surface-container-lowest",
-        offset && "stair-offset-even",
-      )}
-    >
-      <div className="group relative aspect-[3/4] overflow-hidden">
-        <Image
+    <article className={cn("group", offset && "md:mt-20")}>
+      <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
+        <LuxuryImage
           src={image}
           alt={imageAlt}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          className="luxury-transition group-hover:scale-[1.03]"
+          sizes="(max-width: 768px) 100vw, 40vw"
         />
       </div>
-      <div className="p-8">
-        <span className="font-label-caps mb-2 block text-secondary">{tag}</span>
-        <h4 className="font-display mb-4 text-[24px] text-primary">{title}</h4>
-        <p className="text-body-md text-on-surface-variant">{body}</p>
+      <div className="pt-8">
+        <span className="font-label-caps text-gold">{tag}</span>
+        <h4 className="font-editorial mt-3 text-[28px] text-charcoal">{title}</h4>
+        <p className="mt-4 max-w-sm text-[15px] leading-[1.75] text-on-surface-variant">
+          {body}
+        </p>
       </div>
     </article>
   );

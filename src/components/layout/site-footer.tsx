@@ -16,27 +16,25 @@ export async function SiteFooter() {
   ];
 
   return (
-    <footer className="w-full border-t border-outline/10 bg-primary-container px-margin py-24 md:py-32">
-      <div className="mx-auto max-w-[1440px]">
+    <footer className="border-t border-clay/15 bg-charcoal px-margin py-24 md:py-32">
+      <div className="mx-auto max-w-[1280px]">
         <div className="flex flex-col gap-16 md:flex-row md:justify-between">
           <div>
-            <h2 className="font-display text-[48px] leading-none text-on-primary md:text-[64px]">
-              SASALLE
-            </h2>
-            <p className="font-label-caps mt-4 text-on-primary-container">{t("footerTag")}</p>
-            <div className="mt-8">
+            <h2 className="font-editorial text-[48px] text-ivory md:text-[56px]">SASALLE</h2>
+            <p className="font-label-caps mt-4 text-smoke">{t("footerTag")}</p>
+            <div className="mt-10">
               <SocialLinks variant="dark" />
             </div>
           </div>
 
-          <div className="flex max-w-md flex-col gap-8">
+          <div className="flex max-w-md flex-col gap-10">
             <FooterWhatsAppBlock title={ti("whatsappTitle")} />
             <div className="flex flex-col gap-4">
               {links.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-base text-on-primary-container transition-all hover:text-secondary-container hover:underline underline-offset-4"
+                  className="text-[15px] text-smoke luxury-transition hover:text-ivory"
                 >
                   {link.label}
                 </Link>
@@ -45,7 +43,7 @@ export async function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-on-primary-container/20 pt-12 text-on-primary-container">
+        <div className="mt-16 border-t border-clay/20 pt-12">
           <OtaPartners variant="dark" />
         </div>
       </div>

@@ -24,6 +24,7 @@
     "quietude": "The Quietude",
     "quietudeBody": "Expansive volumes designed to facilitate a state of effortless being.",
     "stillnessTitle": "Stillness as Luxury",
+    "stillnessSub": "Where European restraint meets tropical material heritage.",
     "discoverRooms": "DISCOVER ROOMS",
     "curated": "CURATED EXPERIENCES",
     "sanctuary": "The Sanctuary",
@@ -54,7 +55,12 @@
     "ivory": "The Ivory Pavilion",
     "ivoryBody": "An ethereal retreat flooded with natural light, featuring lime-wash finishes and organic textures.",
     "from": "Starting From",
-    "viewSanctuary": "VIEW SANCTUARY"
+    "viewSanctuary": "VIEW SANCTUARY",
+    "reserve": "RESERVE",
+    "swipeHint": "Swipe to explore collections",
+    "size": "Interior",
+    "view": "Orientation",
+    "allRooms": "All sanctuaries"
   },
   "spa": {
     "sanctuary": "SANCTUARY",
@@ -97,6 +103,7 @@
   },
   "book": {
     "title": "Reserve Your Stay",
+    "privateBooking": "Private reservation",
     "selectDates": "Select dates",
     "step1": "Dates & Room",
     "step2": "Guest Details",
@@ -120,6 +127,11 @@
   "guest": {
     "keyTitle": "Digital Room Key",
     "keyBody": "Your suite awaits. Present this pass at the lift gallery.",
+    "keyTap": "Tap to activate",
+    "keyUnlock": "Unlock suite",
+    "keyActive": "Access granted",
+    "keyGranted": "Suite 412 · Lift gallery ready",
+    "keySecure": "Encrypted credential · valid for today's stay",
     "checkIn": "Mobile Check-In",
     "checkOut": "Express Check-Out",
     "preferences": "Pre-Arrival Preferences",

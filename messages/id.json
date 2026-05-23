@@ -24,6 +24,7 @@
     "quietude": "Ketenangan",
     "quietudeBody": "Volume lapang yang dirancang untuk keadaan hidup tanpa usaha.",
     "stillnessTitle": "Ketenangan sebagai Kemewahan",
+    "stillnessSub": "Di mana keanggunan Eropa bertemu warisan material tropis.",
     "discoverRooms": "JELAJAHI KAMAR",
     "curated": "PENGALAMAN TERKURASI",
     "sanctuary": "Suaka",
@@ -54,7 +55,12 @@
     "ivory": "Pavilion Ivory",
     "ivoryBody": "Retret etereal dengan cahaya alami, finishing lime-wash, dan tekstur organik.",
     "from": "Mulai Dari",
-    "viewSanctuary": "LIHAT SUAKA"
+    "viewSanctuary": "LIHAT SUAKA",
+    "reserve": "PESAN",
+    "swipeHint": "Geser untuk menjelajahi koleksi",
+    "size": "Interior",
+    "view": "Orientasi",
+    "allRooms": "Semua suaka"
   },
   "spa": {
     "sanctuary": "SUAKA",
@@ -97,6 +103,7 @@
   },
   "book": {
     "title": "Pesan Menginap Anda",
+    "privateBooking": "Reservasi pribadi",
     "selectDates": "Pilih tanggal",
     "step1": "Tanggal & Kamar",
     "step2": "Detail Tamu",
@@ -120,6 +127,11 @@
   "guest": {
     "keyTitle": "Kunci Kamar Digital",
     "keyBody": "Suite Anda menanti. Tunjukkan pass ini di galeri lift.",
+    "keyTap": "Ketuk untuk mengaktifkan",
+    "keyUnlock": "Buka suite",
+    "keyActive": "Akses diberikan",
+    "keyGranted": "Suite 412 · Galeri lift siap",
+    "keySecure": "Kredensial terenkripsi · berlaku hari ini",
     "checkIn": "Check-In Mobile",
     "checkOut": "Check-Out Ekspres",
     "preferences": "Preferensi Pra-Kedatangan",

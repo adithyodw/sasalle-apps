@@ -24,6 +24,7 @@
     "quietude": "静谧",
     "quietudeBody": "开阔体量，营造 effortless 的存在状态。",
     "stillnessTitle": "静谧即奢华",
+    "stillnessSub": "欧式克制遇见热带材质传承。",
     "discoverRooms": "探索客房",
     "curated": "精选体验",
     "sanctuary": "圣所",
@@ -54,7 +55,12 @@
     "ivory": "象牙亭阁",
     "ivoryBody": "自然光充盈的 ethereal 休憩，石灰水洗与有机肌理。",
     "from": "起价",
-    "viewSanctuary": "查看圣所"
+    "viewSanctuary": "查看圣所",
+    "reserve": "预订",
+    "swipeHint": "滑动浏览系列",
+    "size": "面积",
+    "view": "景观",
+    "allRooms": "全部客房"
   },
   "spa": {
     "sanctuary": "圣所",
@@ -97,6 +103,7 @@
   },
   "book": {
     "title": "预订您的驻留",
+    "privateBooking": "私人预订",
     "selectDates": "选择日期",
     "step1": "日期与客房",
     "step2": "宾客信息",
@@ -120,6 +127,11 @@
   "guest": {
     "keyTitle": "数字房钥",
     "keyBody": "您的套房已备好。请在电梯廊出示此凭证。",
+    "keyTap": "点击激活",
+    "keyUnlock": "解锁套房",
+    "keyActive": "已授权",
+    "keyGranted": "412 套房 · 电梯廊就绪",
+    "keySecure": "加密凭证 · 今日有效",
     "checkIn": "移动入住",
     "checkOut": "快速退房",
     "preferences": "抵达前偏好",

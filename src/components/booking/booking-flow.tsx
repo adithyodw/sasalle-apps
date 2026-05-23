@@ -45,8 +45,8 @@ export function BookingFlow() {
         {steps.map((label, i) => (
           <li
             key={label}
-            className={`flex-1 border-b-2 py-2 font-label-caps text-center ${
-              step === i + 1 ? "border-primary text-primary" : "border-outline-variant/30 text-outline"
+              className={`flex-1 border-b-2 py-2 font-label-caps text-center ${
+              step === i + 1 ? "border-brick text-charcoal" : "border-clay/25 text-smoke"
             }`}
           >
             {label}

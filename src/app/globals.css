@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-display: var(--font-bodoni), "Bodoni Moda", serif;
+  --font-display: var(--font-playfair), "Playfair Display", "Didot", serif;
   --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
 
   --color-charcoal: #0b0d10;
@@ -13,44 +13,49 @@
   --color-hijau: #466557;
   --color-clay: #86736f;
 
-  --color-primary: #5d241a;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #7a3a2e;
-  --color-on-primary-container: #ffa797;
-  --color-secondary: #466557;
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: #c5e7d6;
-  --color-on-secondary-container: #4a695b;
-  --color-surface: #f9f9fd;
-  --color-on-surface: #1a1c1f;
+  --color-surface: #f5f1ea;
+  --color-on-surface: #0b0d10;
   --color-on-surface-variant: #534340;
-  --color-surface-container-low: #f3f3f7;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-high: #e8e8ec;
-  --color-surface-container-highest: #e2e2e6;
-  --color-outline: #86736f;
-  --color-outline-variant: #d9c1bd;
-  --color-primary-fixed: #ffdad3;
+  --color-surface-elevated: #faf7f2;
+  --color-surface-muted: #ebe6dc;
 
-  --spacing-margin-desktop: 80px;
-  --spacing-margin-mobile: 20px;
-  --spacing-gutter: 24px;
-  --spacing-section: 64px;
-  --spacing-max-width: 1440px;
+  --color-primary: #7a3a2e;
+  --color-on-primary: #f5f1ea;
+  --color-accent: #b89b5e;
+
+  --spacing-margin-desktop: 96px;
+  --spacing-margin-mobile: 24px;
+  --spacing-gutter: 32px;
+  --spacing-section: 120px;
+  --spacing-max: 1280px;
+
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     @apply bg-surface text-on-surface font-body antialiased;
     min-height: 100dvh;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
   ::selection {
-    @apply bg-primary/20;
+    background-color: color-mix(in srgb, var(--color-gold) 35%, transparent);
+    color: var(--color-charcoal);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -58,13 +63,20 @@
   .font-label-caps {
     font-family: var(--font-body);
     font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
   }
 
+  .font-editorial {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
   .pb-safe {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 12px);
   }
 
   .pt-safe {
@@ -83,26 +95,48 @@
     }
   }
 
+  .section-pad {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 768px) {
+    .section-pad {
+      padding-top: var(--spacing-section);
+      padding-bottom: var(--spacing-section);
+    }
+  }
+
   .clay-breeze-pattern {
-    background-image: radial-gradient(circle, #86736f 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-image: radial-gradient(circle, color-mix(in srgb, var(--color-clay) 40%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.35;
   }
 
-  .clay-pattern-subtle {
-    background-image: radial-gradient(#86736f 1px, transparent 1px);
-    background-size: 24px 24px;
-    opacity: 0.05;
+  .hairline {
+    height: 1px;
+    background: color-mix(in srgb, var(--color-clay) 35%, transparent);
   }
 
-  .stair-offset-even {
-    @apply md:mt-24;
+  .luxury-transition {
+    transition: all 0.6s var(--ease-luxury);
   }
-}
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
-}
+  .snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.material-symbols-filled {
-  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
+  .snap-center {
+    scroll-snap-align: center;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
