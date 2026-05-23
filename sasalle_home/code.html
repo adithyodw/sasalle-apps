@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>SASALLE | Architectural Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#d9c1bd",
+                        "inverse-primary": "#ffb4a6",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#8f4b3e",
+                        "on-error": "#ffffff",
+                        "secondary": "#466557",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f7",
+                        "secondary-fixed": "#c8ead8",
+                        "on-primary-fixed-variant": "#723429",
+                        "primary-fixed": "#ffdad3",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "tertiary-fixed": "#ffdbcf",
+                        "secondary-fixed-dim": "#adcebd",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#7a3a2e",
+                        "on-secondary-fixed": "#012116",
+                        "surface-container-high": "#e8e8ec",
+                        "on-surface-variant": "#534340",
+                        "background": "#f9f9fd",
+                        "surface-container-highest": "#e2e2e6",
+                        "on-secondary-fixed-variant": "#2f4d40",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#6f3721",
+                        "on-primary-fixed": "#3a0a04",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e2e2e6",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1f",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1f",
+                        "primary-fixed-dim": "#ffb4a6",
+                        "inverse-on-surface": "#f0f0f5",
+                        "surface-dim": "#dadade",
+                        "surface-container": "#eeedf2",
+                        "on-tertiary-container": "#fbaa8d",
+                        "on-primary-container": "#ffa797",
+                        "inverse-surface": "#2f3034",
+                        "tertiary": "#5b2712",
+                        "surface-bright": "#f9f9fd",
+                        "tertiary-container": "#773d27",
+                        "on-secondary-container": "#4a695b",
+                        "surface": "#f9f9fd",
+                        "on-tertiary-fixed": "#380d00",
+                        "secondary-container": "#c5e7d6",
+                        "primary": "#5d241a",
+                        "outline": "#86736f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "max-width": "1440px",
+                        "unit": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-xl": ["Bodoni Moda"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .font-label-caps { font-family: 'Inter'; font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .stair-grid-item:nth-child(even) { transform: translateY(40px); }
+        .clay-breeze-pattern {
+            background-image: radial-gradient(circle, #86736f 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary/20">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8">
+<div class="cursor-pointer active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-on-primary-fixed">menu</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tight text-primary dark:text-primary-fixed">SASALLE</h1>
+<div class="cursor-pointer active:opacity-70 transition-opacity">
+<span class="font-label-caps text-on-surface-variant dark:text-on-primary-container">EN</span>
+</div>
+</header>
+<main class="overflow-x-hidden pt-0">
+<!-- Hero Section: Vertical Architectural Stillness -->
+<section class="relative h-screen w-full overflow-hidden">
+<img alt="SASALLE Hotel Lobby" class="absolute inset-0 w-full h-full object-cover grayscale-[0.2]" data-alt="A cinematic, low-angle vertical shot of a luxury hotel lobby at dusk. The architecture features deep red brick walls and monolithic dark pillars that create a rhythmic shadow play. Warm amber light glows from hidden coves and a curved, textured green feature wall, evoking a sense of material honesty and quiet luxury. The flooring is smooth grey stone, reflecting the soft, dramatic illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACA1bW6pzkHrNaWU7651J1uvHwuF48gcD38-P49yYDemIgPKkZ_boZLkpEwZgqtVyiyDGTR3xcwEXuqt73xpKIKz0TgpQmrj1rQkJq0rjnLnhMPx0RjcTTyyoS1JUA3y7D5cnzOaCpQzhGLNEo0SjqZ4YU4I6jlBblW72d7VkAcs1O8_sPTr4EZ3CeDpIkVSgvtG5-lu29R4EJU6evVVR7jwJxvuoeGxJsUPg2MjDFnJ2Naprb-VmC73Lw3laRIQzq7UbohZ8TdS_R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-black/20"></div>
+<div class="absolute bottom-24 left-margin-mobile md:left-margin-desktop max-w-xl">
+<p class="font-label-caps text-on-surface-variant mb-4 animate-pulse">ESTABLISHED MCMXXIV</p>
+<h2 class="font-headline-xl text-primary leading-tight">The Art of <br/>Deep Presence</h2>
+</div>
+</section>
+<!-- Material Honesty: The Ritual of the Stay -->
+<section class="bg-surface px-margin-mobile md:px-margin-desktop py-32">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row gap-gutter">
+<div class="md:w-1/3 mb-16 md:mb-0">
+<p class="font-label-caps text-outline mb-6">SECTION 01</p>
+<h3 class="font-headline-lg text-primary mb-8">The Ritual <br/>of the Stay</h3>
+<div class="w-12 h-[1px] bg-primary mb-8"></div>
+<p class="font-body-md text-on-surface-variant max-w-xs">
+                        Architecture is more than form; it is a sensory dialogue between the earth's raw elements and the human spirit. At SASALLE, we curate stillness through stone and linen.
+                    </p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<!-- Editorial Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/10 overflow-hidden">
+<div class="aspect-[3/4] overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An extreme close-up of high-quality interior materials. A slab of rough-hewn grey travertine stone rests against a backdrop of heavily textured cream-colored linen. The lighting is soft and directional, highlighting the tactile qualities and mineral details of the materials. The overall aesthetic is one of museum-like restraint and architectural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr4p6em0177fbmUi22y1r_j09M115Qc3c2mLjF70gMCGPLM49jbNZBrBZXN1eNkfk0SEVmsIbvU_yXtTHIUHQ5a-jOkEEwCEmHIJWmoqoNLX1o6OtLMQRO4O2GM-2Z5Q9kam3OSsVCUec47MtsnhghGSguAiZqRhNqVV9NoL6pATEYzYSHdSQ1hpS3i0U74UA7AlV4ejCKKFiqE6xcqZqs1_jnWQyi2f4ofnFkyObCd8vKMnfaGHq_OI8amMdJb_VcN9qfe6cSP1M-"/>
+</div>
+<div class="p-8">
+<span class="font-label-caps text-secondary mb-2 block">CRAFT</span>
+<h4 class="font-headline-md text-primary mb-4">Material Honesty</h4>
+<p class="font-body-md text-on-surface-variant">Untouched textures that ground the senses in the physical world.</p>
+</div>
+</div>
+<!-- Editorial Card 2 (Stair Offset Logic) -->
+<div class="bg-surface-container-lowest border border-outline-variant/10 overflow-hidden md:mt-24">
+<div class="aspect-[3/4] overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A serene, minimalist hotel room interior during the blue hour. A low-profile bed with fine neutral linens is positioned near a large floor-to-ceiling window overlooking a dimly lit city skyline. A single sculptural designer lamp casts a warm, soft pool of light on a dark wooden side table. The walls are a muted clay red, creating an intimate, cocoon-like atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMJOTaYWp6dwSyET66aApi6HbIoGxv9GqWnPaHAvUwnLMAABWv-X9cKglK4Alf9wHsB4vupu9CiWyEk4unTzHoJ5SdJYxUFzKABK-45C9VUysS5PvfHyYZYWhHKJPT9JPHD8PyX88DuP5172ZPO0P7huYzY9BX5qLSDS3Bkjo90WKawZuUO6jjvUp3hkqTKzCLuhjWQz41IhuDbEzt0lNPTW87J5o8ImC7zJHcr1EgVy7s6HwJigj9i8JyRuKyQO0NKycyCkEDvrwQ"/>
+</div>
+<div class="p-8">
+<span class="font-label-caps text-secondary mb-2 block">SPACE</span>
+<h4 class="font-headline-md text-primary mb-4">The Quietude</h4>
+<p class="font-body-md text-on-surface-variant">Expansive volumes designed to facilitate a state of effortless being.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Architectural Background Motif Section -->
+<section class="relative bg-primary-container py-32 clay-breeze-pattern">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-display-lg text-on-primary mb-8 tracking-tighter">Stillness as Luxury</h3>
+<button class="bg-on-primary-fixed text-on-primary font-label-caps px-12 py-5 hover:bg-on-primary-fixed/90 transition-colors duration-300">
+                    DISCOVER ROOMS
+                </button>
+</div>
+</section>
+<!-- Bento Layout: Services -->
+<section class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-32">
+<div class="max-w-max-width mx-auto">
+<p class="font-label-caps text-outline text-center mb-16">CURATED EXPERIENCES</p>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Feature -->
+<div class="md:col-span-8 h-[500px] relative overflow-hidden bg-surface-container-highest group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply group-hover:scale-105 transition-transform duration-1000" data-alt="A tranquil luxury spa setting with a focus on a basalt stone water feature. Soft steam rises in a dimly lit room made of dark slate and mahogany. The lighting is extremely soft, highlighting the rippling surface of the water and the rich textures of the natural stone. The mood is deeply meditative and private." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQZ4mO3yLT_gOaVIbeOYEpdEhKkaseWOj0rkefzKlgiuuw3RFKOC4wv3fcqBZXootVtosMM4kG7orf5FbEx_QD7qS3QeZTHsL81jG4kj7P3yVDBhJFcY3LzLO6Kb-7CJeZ55DRLShR2Gq_vzEMx1uPmr-UYIEfvLRm8IL0z6eHVYpNaTOj4uvzCoVlAu17uUhct_iDyD-rUs7S2Fsub2Z0EKESzkMjnUEyWk9j1EJWT3YoBE74EXxys4WCVdl6p3CYnmD24U4lfW9_"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end text-on-surface">
+<h4 class="font-headline-xl text-primary-fixed mb-4">The Sanctuary</h4>
+<p class="font-body-lg text-on-primary-fixed max-w-sm">A dedicated floor for silence, thermal baths, and meditative architectural journeys.</p>
+</div>
+</div>
+<!-- Sub Feature 1 -->
+<div class="md:col-span-4 h-[500px] relative overflow-hidden bg-secondary-container group">
+<div class="absolute inset-0 p-10 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">restaurant</span>
+<h4 class="font-headline-md text-secondary mb-4">L'Art de Table</h4>
+<p class="font-body-md text-on-secondary-container">Indigenous ingredients served on artisanal stoneware by local craftsmen.</p>
+<div class="mt-8 border-b border-secondary pb-1 font-label-caps text-secondary cursor-pointer">VIEW MENU</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial List -->
+<section class="bg-surface px-margin-mobile md:px-margin-desktop py-32">
+<div class="max-w-2xl mx-auto">
+<h3 class="font-headline-lg text-primary text-center mb-16 italic">The House Principles</h3>
+<ul class="divide-y divide-outline-variant/30">
+<li class="py-12 group cursor-pointer">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-outline">01</span>
+<h5 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Tactile Integrity</h5>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</li>
+<li class="py-12 group cursor-pointer">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-outline">02</span>
+<h5 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Silent Service</h5>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</li>
+<li class="py-12 group cursor-pointer">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-outline">03</span>
+<h5 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Chrono-Minimalism</h5>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-primary-container dark:bg-surface-container-lowest border-t border-outline/10 px-margin-mobile md:px-margin-desktop py-32 flex flex-col md:flex-row justify-between items-start md:items-center">
+<div class="mb-12 md:mb-0">
+<h2 class="font-display-lg text-on-primary dark:text-on-surface mb-4">SASALLE</h2>
+<p class="font-label-caps text-on-primary-container dark:text-on-surface-variant">© 2024 SASALLE HOTEL. ARCHITECTURAL EXCELLENCE.</p>
+</div>
+<div class="flex flex-col gap-6">
+<a class="font-body-md text-on-primary-container dark:text-on-surface-variant hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-primary-container dark:text-on-surface-variant hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Sustainability</a>
+<a class="font-body-md text-on-primary-container dark:text-on-surface-variant hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Careers</a>
+<a class="font-body-md text-on-primary-container dark:text-on-surface-variant hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Press</a>
+</div>
+</footer>
+<!-- Bottom Padding for Nav -->
+<div class="h-24"></div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface dark:bg-primary-container border-t border-outline-variant/20 shadow-sm flex justify-around items-center h-20 pb-safe">
+<!-- Home Active -->
+<div class="flex flex-col items-center justify-center text-secondary dark:text-secondary-container scale-95 active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps mt-1">HOME</span>
+</div>
+<!-- Rooms -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container scale-95 active:scale-90 transition-transform duration-200 cursor-pointer hover:text-primary dark:hover:text-primary-fixed">
+<span class="material-symbols-outlined">bed</span>
+<span class="font-label-caps mt-1">ROOMS</span>
+</div>
+<!-- Key -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container scale-95 active:scale-90 transition-transform duration-200 cursor-pointer hover:text-primary dark:hover:text-primary-fixed">
+<span class="material-symbols-outlined">key</span>
+<span class="font-label-caps mt-1">KEY</span>
+</div>
+<!-- Concierge -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container scale-95 active:scale-90 transition-transform duration-200 cursor-pointer hover:text-primary dark:hover:text-primary-fixed">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label-caps mt-1">CONCIERGE</span>
+</div>
+</nav>
+<script>
+        // Simple parallax effect for hero image
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrollPos * 0.4}px)`;
+            }
+        });
+
+        // Interactive navigation simulation
+        const navItems = document.querySelectorAll('nav > div');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navItems.forEach(nav => {
+                    nav.classList.remove('text-secondary', 'dark:text-secondary-container');
+                    nav.classList.add('text-on-surface-variant', 'dark:text-on-primary-container');
+                    const icon = nav.querySelector('.material-symbols-outlined');
+                    if(icon) icon.style.fontVariationSettings = "'FILL' 0";
+                });
+                item.classList.add('text-secondary', 'dark:text-secondary-container');
+                item.classList.remove('text-on-surface-variant', 'dark:text-on-primary-container');
+                const activeIcon = item.querySelector('.material-symbols-outlined');
+                if(activeIcon) activeIcon.style.fontVariationSettings = "'FILL' 1";
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>SASALLE - Rooms &amp; Suites</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#d9c1bd",
+                "inverse-primary": "#ffb4a6",
+                "on-error-container": "#93000a",
+                "surface-tint": "#8f4b3e",
+                "on-error": "#ffffff",
+                "secondary": "#466557",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f3f3f7",
+                "secondary-fixed": "#c8ead8",
+                "on-primary-fixed-variant": "#723429",
+                "primary-fixed": "#ffdad3",
+                "tertiary-fixed-dim": "#ffb59b",
+                "tertiary-fixed": "#ffdbcf",
+                "secondary-fixed-dim": "#adcebd",
+                "on-secondary": "#ffffff",
+                "primary-container": "#7a3a2e",
+                "on-secondary-fixed": "#012116",
+                "surface-container-high": "#e8e8ec",
+                "on-surface-variant": "#534340",
+                "background": "#f9f9fd",
+                "surface-container-highest": "#e2e2e6",
+                "on-secondary-fixed-variant": "#2f4d40",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#6f3721",
+                "on-primary-fixed": "#3a0a04",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e2e2e6",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#1a1c1f",
+                "error": "#ba1a1a",
+                "on-background": "#1a1c1f",
+                "primary-fixed-dim": "#ffb4a6",
+                "inverse-on-surface": "#f0f0f5",
+                "surface-dim": "#dadade",
+                "surface-container": "#eeedf2",
+                "on-tertiary-container": "#fbaa8d",
+                "on-primary-container": "#ffa797",
+                "inverse-surface": "#2f3034",
+                "tertiary": "#5b2712",
+                "surface-bright": "#f9f9fd",
+                "tertiary-container": "#773d27",
+                "on-secondary-container": "#4a695b",
+                "surface": "#f9f9fd",
+                "on-tertiary-fixed": "#380d00",
+                "secondary-container": "#c5e7d6",
+                "primary": "#5d241a",
+                "outline": "#86736f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-desktop": "80px",
+                "margin-mobile": "20px",
+                "max-width": "1440px",
+                "unit": "4px",
+                "gutter": "24px",
+                "section-gap": "64px"
+            },
+            "fontFamily": {
+                "headline-md": ["Bodoni Moda"],
+                "body-md": ["Inter"],
+                "headline-lg-mobile": ["Bodoni Moda"],
+                "label-sm": ["Inter"],
+                "display-lg": ["Bodoni Moda"],
+                "headline-xl": ["Bodoni Moda"],
+                "body-lg": ["Inter"],
+                "headline-lg": ["Bodoni Moda"],
+                "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                "label-caps": ["11px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .stair-offset:nth-child(even) {
+            transform: translateY(40px);
+        }
+        .parallax-bg {
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .room-card:hover .parallax-bg {
+            transform: scale(1.05);
+        }
+        .clay-pattern {
+            background-image: radial-gradient(#86736f 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary/20 selection:text-secondary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 h-20">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg tracking-tight text-primary">SASALLE</h1>
+<div class="flex items-center gap-6">
+<button class="hidden md:block font-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300">RESERVATIONS</button>
+<span class="font-label-caps text-on-surface-variant cursor-pointer">EN</span>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-24 pb-32 overflow-x-hidden">
+<!-- Hero Section: Editorial Intro -->
+<section class="px-margin-mobile md:px-margin-desktop py-12 relative">
+<div class="absolute inset-0 clay-pattern pointer-events-none"></div>
+<div class="max-w-4xl">
+<p class="font-label-sm text-secondary mb-6 tracking-widest">RESIDENTIAL ARCHITECTURE</p>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight">Sanctuaries of <br/>Material Stillness</h2>
+<div class="w-24 h-px bg-outline-variant mb-12"></div>
+</div>
+</section>
+<!-- Room Gallery: Vertical Editorial Cards -->
+<section class="px-margin-mobile md:px-margin-desktop space-y-24 md:space-y-48">
+<!-- Room Card 1: The Heritage Suite -->
+<div class="room-card group flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-3/5 aspect-[4/5] overflow-hidden relative border border-outline-variant/20">
+<img class="parallax-bg w-full h-full object-cover" data-alt="A luxurious hotel suite featuring deep green glazed Hijau Nyonya ceramic wall tiles that catch the soft morning light. The room is minimalist with dark wood paneling, a large arched window revealing a misty garden, and a bespoke stone-carved bathtub steaming gently. The atmosphere is quiet, high-end, and deeply serene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoqw7pgaZjEsdUcRL1t0Phx9fYGCOZEdrud75PWInPwshhE-xNEoXY29oRiOs9z3PWmKrZ5HaPzUJZxEU66Q0x7uIoP9SvIUC26ryQsYz4H_BMkn9XV-g3kgsuA_QxvInY72Ay2XaNWLmVeAoKzIclHVb-DMkqRY7MAW4Gn7ZYD2sT1z2ZTXqrmowCJpgWLG1aaPiOPtm_y8dJzPCcm6TLpQMBe3BMI_XzVW9pKDA5Tq-WvAjeY2CR-uAmFASanH7I4APFITRVrblF"/>
+</div>
+<div class="w-full md:w-2/5 flex flex-col items-start text-left">
+<span class="font-label-sm text-secondary mb-2">COLLECTION I</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The Heritage Suite</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed max-w-sm">
+                        A dialogue between history and modernity, featuring hand-fired Hijau Nyonya accents and reclaimed timber floors.
+                    </p>
+<div class="flex flex-col gap-6">
+<span class="font-headline-md text-headline-md text-primary italic">Starting From $850</span>
+<button class="bg-primary text-on-primary px-8 py-4 font-label-caps tracking-[0.1em] hover:bg-secondary transition-all duration-500 flex items-center gap-3">
+                            VIEW SANCTUARY
+                            <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Room Card 2: The Obsidian Studio (Right Aligned) -->
+<div class="room-card group flex flex-col md:flex-row-reverse gap-12 items-center">
+<div class="w-full md:w-3/5 aspect-[4/5] overflow-hidden relative border border-outline-variant/20">
+<img class="parallax-bg w-full h-full object-cover" data-alt="An architectural bedroom with dramatic charcoal black matte walls and minimalist basalt stone furniture. Floor-to-ceiling glass windows frame a monolithic urban landscape at twilight. The bed is dressed in crisp white linen, creating a sharp contrast against the dark textures. High-contrast, moody lighting emphasizes the structural purity of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuVVis-tkIaOPiUz-HtuV9tb6HaY3ehGTHW2c1NNlc1nfC0eGY694Y60dzdPwYUdidP_5atw_Kn6gF8dhC7vIAYaNhd5-JTopFmKNtLMgoj-sRVJLKhbmwdQJvwBM_FleEhHPFGHJ7tf4LF18336JdelRiwiocAALi-7jKxXjAKZQeOjQ8VGqz096xRWA06hlC5Ock_Qyg3FdbxLVvQQFCyebAFgvky1NVSvCW7Jlt7wkwwbI6FPWz1XaAWM9qINV5R4TWkMpZj3PI"/>
+</div>
+<div class="w-full md:w-2/5 flex flex-col items-start md:items-end text-left md:text-right">
+<span class="font-label-sm text-secondary mb-2">COLLECTION II</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The Obsidian Studio</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed max-w-sm">
+                        Defined by its structural purity, this studio utilizes light-absorbing materials to create a cocoon of silence.
+                    </p>
+<div class="flex flex-col gap-6 items-start md:items-end">
+<span class="font-headline-md text-headline-md text-primary italic">Starting From $620</span>
+<button class="border border-outline px-8 py-4 font-label-caps tracking-[0.1em] hover:bg-surface-container-high transition-all duration-500">
+                            VIEW SANCTUARY
+                        </button>
+</div>
+</div>
+</div>
+<!-- Room Card 3: The Ivory Pavilion -->
+<div class="room-card group flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-3/5 aspect-[4/5] overflow-hidden relative border border-outline-variant/20">
+<img class="parallax-bg w-full h-full object-cover" data-alt="A bright, airy pavilion with soft ivory lime-wash walls and high ceilings. Warm sunlight filters through thin linen curtains, casting soft shadows across a light-colored oak floor. A minimalist stone fireplace serves as the focal point, while organic-shaped clay pottery sits on a low shelf. The mood is ethereal, light, and perfectly tranquil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf7ex9rTQTGXxBCiVG57WxsfAcD8wfMAQBs76IWGbREyXHjFyx2Ql8XSsESYtDg1CrhK9KvfLtb1P9sOyCB5nlSEYdxuTCfu1wlx2AI1EsYs4sRz_VP62-FWvj7HAoA015k_fck-1kNJQOZjjTmpEnuCsdYXPlg9BEkYR58KXzP4hdlexEtDn12Cz06tmKn3271QcljBX88rOsxMcXTXu5tN3TItdKpfamR8tuHU7tYA-5jjNK8chLMnO5rhxhmptR_3U1Fb1i2stD"/>
+</div>
+<div class="w-full md:w-2/5 flex flex-col items-start text-left">
+<span class="font-label-sm text-secondary mb-2">COLLECTION III</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The Ivory Pavilion</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed max-w-sm">
+                        An ethereal retreat flooded with natural light, featuring lime-wash finishes and organic textures.
+                    </p>
+<div class="flex flex-col gap-6">
+<span class="font-headline-md text-headline-md text-primary italic">Starting From $1,150</span>
+<button class="bg-primary text-on-primary px-8 py-4 font-label-caps tracking-[0.1em] hover:bg-secondary transition-all duration-500 flex items-center gap-3">
+                            VIEW SANCTUARY
+                            <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pattern Section -->
+<section class="py-section-gap px-margin-mobile flex justify-center opacity-20">
+<div class="grid grid-cols-4 gap-4">
+<div class="w-4 h-4 rounded-full border border-primary"></div>
+<div class="w-4 h-4 rounded-full bg-primary"></div>
+<div class="w-4 h-4 rounded-full border border-primary"></div>
+<div class="w-4 h-4 rounded-full border border-primary"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-primary-container border-t border-outline/10 flex flex-col md:flex-row justify-between items-start md:items-center px-margin-mobile md:px-margin-desktop py-section-gap w-full text-on-primary">
+<div class="mb-12 md:mb-0">
+<h2 class="font-display-lg text-on-primary mb-4">SASALLE</h2>
+<p class="font-body-md opacity-70">© 2024 SASALLE HOTEL. ARCHITECTURAL EXCELLENCE.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Sustainability</a>
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Careers</a>
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all underline-offset-4 hover:underline" href="#">Press</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant/20 flex justify-around items-center h-20 shadow-sm pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-caps text-label-caps tracking-widest">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary font-bold scale-95 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">bed</span>
+<span class="font-label-caps text-label-caps tracking-widest">ROOMS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">key</span>
+<span class="font-label-caps text-label-caps tracking-widest">KEY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="font-label-caps text-label-caps tracking-widest">CONCIERGE</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for smooth scroll or card entrance
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.room-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+                observer.observe(card);
+            });
+        });
+
+        // Parallax effect on scroll for room images
+        window.addEventListener('scroll', () => {
+            const parallaxImages = document.querySelectorAll('.parallax-bg');
+            const scrolled = window.pageYOffset;
+
+            parallaxImages.forEach(img => {
+                const parent = img.parentElement;
+                const offsetTop = parent.offsetTop;
+                const height = parent.offsetHeight;
+                
+                if (scrolled + window.innerHeight > offsetTop && scrolled < offsetTop + height) {
+                    const movement = (scrolled - offsetTop) * 0.05;
+                    img.style.transform = `translateY(${movement}px) scale(1.1)`;
+                }
+            });
+        });
+    </script>
+</body></html>

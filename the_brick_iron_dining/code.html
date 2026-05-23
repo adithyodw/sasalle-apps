@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Brick &amp; Iron | Dining Narrative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#d9c1bd",
+                "inverse-primary": "#ffb4a6",
+                "on-error-container": "#93000a",
+                "surface-tint": "#8f4b3e",
+                "on-error": "#ffffff",
+                "secondary": "#466557",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f3f3f7",
+                "secondary-fixed": "#c8ead8",
+                "on-primary-fixed-variant": "#723429",
+                "primary-fixed": "#ffdad3",
+                "tertiary-fixed-dim": "#ffb59b",
+                "tertiary-fixed": "#ffdbcf",
+                "secondary-fixed-dim": "#adcebd",
+                "on-secondary": "#ffffff",
+                "primary-container": "#7a3a2e",
+                "on-secondary-fixed": "#012116",
+                "surface-container-high": "#e8e8ec",
+                "on-surface-variant": "#534340",
+                "background": "#f9f9fd",
+                "surface-container-highest": "#e2e2e6",
+                "on-secondary-fixed-variant": "#2f4d40",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#6f3721",
+                "on-primary-fixed": "#3a0a04",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e2e2e6",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#1a1c1f",
+                "error": "#ba1a1a",
+                "on-background": "#1a1c1f",
+                "primary-fixed-dim": "#ffb4a6",
+                "inverse-on-surface": "#f0f0f5",
+                "surface-dim": "#dadade",
+                "surface-container": "#eeedf2",
+                "on-tertiary-container": "#fbaa8d",
+                "on-primary-container": "#ffa797",
+                "inverse-surface": "#2f3034",
+                "tertiary": "#5b2712",
+                "surface-bright": "#f9f9fd",
+                "tertiary-container": "#773d27",
+                "on-secondary-container": "#4a695b",
+                "surface": "#f9f9fd",
+                "on-tertiary-fixed": "#380d00",
+                "secondary-container": "#c5e7d6",
+                "primary": "#5d241a",
+                "outline": "#86736f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-desktop": "80px",
+                "margin-mobile": "20px",
+                "max-width": "1440px",
+                "unit": "4px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Bodoni Moda"],
+                "body-md": ["Inter"],
+                "headline-lg-mobile": ["Bodoni Moda"],
+                "label-sm": ["Inter"],
+                "display-lg": ["Bodoni Moda"],
+                "headline-xl": ["Bodoni Moda"],
+                "body-lg": ["Inter"],
+                "headline-lg": ["Bodoni Moda"],
+                "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                "label-caps": ["10px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .breeze-block {
+            background-image: radial-gradient(circle at center, #86736f 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .fade-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6">
+<div class="cursor-pointer active:opacity-70 transition-opacity flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-on-primary-fixed">menu</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tight text-primary dark:text-primary-fixed">SASALLE</h1>
+<div class="cursor-pointer active:opacity-70 transition-opacity">
+<span class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-primary-container">EN</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Cinematic Hero -->
+<section class="relative h-[618px] w-full overflow-hidden">
+<img alt="The Brick &amp; Iron Dining Room" class="w-full h-full object-cover grayscale-[0.2] contrast-110" data-alt="A cinematic wide shot of a luxury restaurant interior named 'The Brick &amp; Iron' during the golden hour. The space features textured clay-red walls, structural iron beams, and floor-to-ceiling windows overlooking a twilight city skyline. Minimalist wooden tables with pristine white linens are spaced widely apart, bathed in the soft, warm glow of recessed architectural lighting. The atmosphere is sophisticated, quiet, and deeply grounded in high-end architectural materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkB6TCeS9QAaIWChe7IYfvbuM47yjeswfLA7MGh9iKSsrEbWIOQjwHShJXiw1h4cP1Qj9iW0HbgMxhfjQib5n-10XnA2QpP023iz2JxwjDq_kq4Ve1tNqIbJRvtEAWwY7yQUci7oruVbN-Xjubi_KBrnuZprSkMNBoATWXRYq8CiLaTGC7RrL_5p8noYgakcPW5V2PAww-MbCGI5uXsNcaGj4MZPVrXXmm3wPOiOFd9eVa1LvE0h6wHSZXAuoSf1FbsfR8nPScziVG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-12 left-margin-mobile right-margin-mobile">
+<p class="font-label-sm text-label-sm text-primary uppercase mb-2">NOW SERVING</p>
+<h2 class="font-headline-xl text-headline-xl text-primary leading-none tracking-tighter">The Brick &amp; Iron</h2>
+</div>
+</section>
+<!-- Editorial Description Section -->
+<section class="px-margin-mobile mt-16 max-w-2xl mx-auto">
+<div class="mb-12">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Seasonal Manifestations</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed opacity-80">
+                    A dialogue between the elemental and the refined. Our menu is a curated progression through the textures of the landscape, translated into architectural plates.
+                </p>
+</div>
+<!-- Bento-style Menu Categories -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Category: Earth -->
+<div class="group relative overflow-hidden border border-outline-variant/30 p-8 hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-[0.2em] uppercase">Phase I</span>
+<h4 class="font-headline-lg text-headline-lg mt-2 italic">Earth</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl opacity-20 group-hover:opacity-100 transition-opacity">filter_vintage</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm tracking-wide">Root textures. Smoked clay. Subterranean aromatics. A study in the permanence of the soil.</p>
+</div>
+<!-- Category: Metal -->
+<div class="group relative overflow-hidden border border-outline-variant/30 p-8 hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-[0.2em] uppercase">Phase II</span>
+<h4 class="font-headline-lg text-headline-lg mt-2 italic">Metal</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl opacity-20 group-hover:opacity-100 transition-opacity">precision_manufacturing</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm tracking-wide">Conductive heat. Cold-pressed reduction. The precision of the blade meets the intensity of the flame.</p>
+</div>
+<!-- Category: Glass -->
+<div class="group relative overflow-hidden border border-outline-variant/30 p-8 hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-[0.2em] uppercase">Phase III</span>
+<h4 class="font-headline-lg text-headline-lg mt-2 italic">Glass</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl opacity-20 group-hover:opacity-100 transition-opacity">blur_on</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm tracking-wide">Translucence. Fragile crystalline structures. Sweetness filtered through clarity and light.</p>
+</div>
+</div>
+</section>
+<!-- Reservation Section -->
+<section class="px-margin-mobile py-24 mt-12 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 breeze-block opacity-10 pointer-events-none"></div>
+<div class="max-w-md mx-auto relative z-10">
+<header class="text-center mb-16">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Secure a Table</h3>
+<div class="w-12 h-[1px] bg-primary mx-auto opacity-30"></div>
+</header>
+<div class="space-y-12">
+<!-- Guest Selector (Horizontal Scroll) -->
+<div class="space-y-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant/60 uppercase text-[10px] tracking-[0.2em]">GUESTS
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+<button class="guest-btn min-w-[60px] h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-all text-sm font-medium" onclick="selectGuest(this)">1</button>
+<button class="guest-btn min-w-[60px] h-12 flex items-center justify-center border border-primary bg-primary text-on-primary shadow-lg transition-all text-sm font-medium" onclick="selectGuest(this)">2</button>
+<button class="guest-btn min-w-[60px] h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-all text-sm font-medium" onclick="selectGuest(this)">3</button>
+<button class="guest-btn min-w-[60px] h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-all text-sm font-medium" onclick="selectGuest(this)">4</button>
+<button class="guest-btn min-w-[60px] h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-all text-sm font-medium" onclick="selectGuest(this)">5</button>
+</div>
+</label></div>
+<!-- Date Selection -->
+<div class="space-y-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant/60 uppercase text-[10px] tracking-[0.2em]">CALENDAR
+<div class="grid grid-cols-7 gap-1 text-center">
+<span class="text-[10px] text-outline opacity-50 py-2">M</span>
+<span class="text-[10px] text-outline opacity-50 py-2">T</span>
+<span class="text-[10px] text-outline opacity-50 py-2">W</span>
+<span class="text-[10px] text-outline opacity-50 py-2">T</span>
+<span class="text-[10px] text-outline opacity-50 py-2">F</span>
+<span class="text-[10px] text-outline opacity-50 py-2">S</span>
+<span class="text-[10px] text-outline opacity-50 py-2">S</span>
+<button class="py-3 text-xs opacity-20 pointer-events-none">12</button>
+<button class="py-3 text-xs opacity-20 pointer-events-none">13</button>
+<button class="py-3 text-xs opacity-20 pointer-events-none">14</button>
+<button class="py-3 text-xs hover:bg-primary-container hover:text-on-primary-container transition-colors">15</button>
+<button class="py-3 text-xs border border-primary text-primary font-bold">16</button>
+<button class="py-3 text-xs hover:bg-primary-container hover:text-on-primary-container transition-colors">17</button>
+<button class="py-3 text-xs hover:bg-primary-container hover:text-on-primary-container transition-colors">18</button>
+</div>
+</label></div>
+<!-- Time Selection -->
+<div class="space-y-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant/60 uppercase text-[10px] tracking-[0.2em]">AVAILABLE HOURS
+<div class="grid grid-cols-3 gap-2">
+<button class="py-4 border border-outline-variant/30 text-xs hover:border-primary transition-all">18:30</button>
+<button class="py-4 border border-primary bg-surface-variant text-xs">19:45</button>
+<button class="py-4 border border-outline-variant/30 text-xs hover:border-primary transition-all">21:00</button>
+</div>
+</label></div>
+<!-- Confirm Action -->
+<button class="w-full bg-primary text-on-primary py-6 font-label-sm text-label-sm tracking-[0.3em] uppercase hover:bg-primary/90 transition-all active:scale-[0.98] shadow-2xl">
+                        Request Reservation
+                    </button>
+<p class="text-[10px] text-center text-on-surface-variant/50 italic">Confirmations are subject to architectural availability.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface dark:bg-primary-container border-t border-outline-variant/20 h-20 shadow-sm flex justify-around items-center pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container scale-95 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-container scale-95 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bed</span>
+<span class="font-label-caps text-label-caps mt-1">ROOMS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container scale-95 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">key</span>
+<span class="font-label-caps text-label-caps mt-1">KEY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container scale-95 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label-caps text-label-caps mt-1">CONCIERGE</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full bg-primary-container dark:bg-surface-container-lowest border-t border-outline/10 px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start md:items-center text-on-primary dark:text-on-surface">
+<div class="mb-8 md:mb-0">
+<h5 class="font-display-lg text-xl tracking-tight mb-2">SASALLE HOTEL</h5>
+<p class="font-label-caps text-[10px] tracking-widest opacity-60">© 2024 ARCHITECTURAL EXCELLENCE.</p>
+</div>
+<div class="flex flex-wrap gap-6">
+<a class="font-body-md text-sm text-on-primary-container dark:text-on-surface-variant hover:underline underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-sm text-on-primary-container dark:text-on-surface-variant hover:underline underline-offset-4 transition-all" href="#">Sustainability</a>
+<a class="font-body-md text-sm text-on-primary-container dark:text-on-surface-variant hover:underline underline-offset-4 transition-all" href="#">Careers</a>
+<a class="font-body-md text-sm text-on-primary-container dark:text-on-surface-variant hover:underline underline-offset-4 transition-all" href="#">Press</a>
+</div>
+</footer>
+<script>
+        function selectGuest(el) {
+            document.querySelectorAll('.guest-btn').forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'shadow-lg');
+                btn.classList.add('border-outline-variant/30');
+            });
+            el.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'shadow-lg');
+            el.classList.remove('border-outline-variant/30');
+        }
+
+        // Simple scroll reveal effect for editorial categories
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.group').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

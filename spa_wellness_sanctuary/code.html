@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SASALLE | Spa &amp; Wellness Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Use the provided Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#d9c1bd",
+                    "inverse-primary": "#ffb4a6",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#8f4b3e",
+                    "on-error": "#ffffff",
+                    "secondary": "#466557",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3f7",
+                    "secondary-fixed": "#c8ead8",
+                    "on-primary-fixed-variant": "#723429",
+                    "primary-fixed": "#ffdad3",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "tertiary-fixed": "#ffdbcf",
+                    "secondary-fixed-dim": "#adcebd",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#7a3a2e",
+                    "on-secondary-fixed": "#012116",
+                    "surface-container-high": "#e8e8ec",
+                    "on-surface-variant": "#534340",
+                    "background": "#f9f9fd",
+                    "surface-container-highest": "#e2e2e6",
+                    "on-secondary-fixed-variant": "#2f4d40",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#6f3721",
+                    "on-primary-fixed": "#3a0a04",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e2e2e6",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1a1c1f",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1c1f",
+                    "primary-fixed-dim": "#ffb4a6",
+                    "inverse-on-surface": "#f0f0f5",
+                    "surface-dim": "#dadade",
+                    "surface-container": "#eeedf2",
+                    "on-tertiary-container": "#fbaa8d",
+                    "on-primary-container": "#ffa797",
+                    "inverse-surface": "#2f3034",
+                    "tertiary": "#5b2712",
+                    "surface-bright": "#f9f9fd",
+                    "tertiary-container": "#773d27",
+                    "on-secondary-container": "#4a695b",
+                    "surface": "#f9f9fd",
+                    "on-tertiary-fixed": "#380d00",
+                    "secondary-container": "#c5e7d6",
+                    "primary": "#5d241a",
+                    "outline": "#86736f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "max-width": "1440px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "section-gap": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Bodoni Moda"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Bodoni Moda"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Bodoni Moda"],
+                    "headline-xl": ["Bodoni Moda"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Bodoni Moda"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-caps": ["11px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ritual-card:nth-child(even) {
+            margin-top: 40px;
+        }
+        .clay-pattern {
+            background-image: radial-gradient(#86736f 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary/20 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg tracking-tight text-primary">SASALLE</h1>
+<div class="flex items-center gap-4 cursor-pointer active:opacity-70 transition-opacity">
+<span class="font-label-caps text-on-surface-variant">EN</span>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative w-full aspect-[4/5] md:aspect-[21/9] overflow-hidden mb-12">
+<img alt="SASALLE Pool Sanctuary" class="w-full h-full object-cover grayscale-[0.2]" data-alt="A cinematic architectural indoor pool at a luxury spa sanctuary, featuring warm terracotta-colored walls and deep emerald green tiled alcoves. The water surface is still with light mist rising from it, reflecting the dark linear wooden slats of the modern skylight ceiling. The atmosphere is quiet and restorative, with soft natural light entering through large windows, creating a serene and museum-like high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIu0BFbmGeuTDKAQzdypncSr-hCBWAZLU0HDCawYVKpikFMawiy_UeClWZAh9sjcud68UEoWi8bii3_jESPdeozDzN2vEJQsEr6b__js1M-_apXI7Jdk0cisV29vKIQ_Fhr4sddZOKd53JrALEcyl9zJ6A2DS8FzxpQWtUSM6Fy-gkVXym5qqJmET2EMAWGQHS2nh6yNnJunzwxb7KUTHxsMNtVJFeYu2_VgJv4fA_s-FGmG-1fmhBWnJJEJz_T2nUnhGtRyxdwhOE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-margin-mobile right-margin-mobile text-surface-container-lowest">
+<span class="font-label-caps tracking-widest block mb-2">SANCTUARY</span>
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl leading-none">The Architectural Stillness</h2>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-20 max-w-2xl mx-auto text-center">
+<div class="h-12 w-px bg-outline-variant mx-auto mb-8"></div>
+<p class="font-headline-md text-headline-md mb-6 italic text-on-surface-variant">
+                "Restoration through architectural silence."
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Experience SASALLE's spa—a museum of the senses. Here, we honor the permanence of stone, the warmth of clay, and the clarity of water. Every ritual is designed as a physical dialogue between the body and the space it inhabits.
+            </p>
+</section>
+<!-- Sanctuary Rituals Grid -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label-caps text-secondary mb-2 block">CURATED EXPERIENCES</span>
+<h3 class="font-headline-lg text-headline-lg">Sanctuary Rituals</h3>
+</div>
+<div class="hidden md:block">
+<button class="border-b border-outline text-label-sm uppercase tracking-widest pb-1 hover:text-primary transition-colors">View All Rituals</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Ritual 1 -->
+<div class="ritual-card flex flex-col group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-container">
+<img alt="Stone Ritual" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up atmospheric photography of smooth volcanic stones being placed on a person's back in a dimly lit, minimalist spa setting. The lighting is low and warm, highlighting the texture of the skin and the matte surface of the stones. The overall mood is deeply restorative and quiet, with a focus on material integrity and architectural stillness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT20K8chCKOyb-8ar2fQATc3-m1bXhPfwr5YMRoVy7rXgIABhQQAMi8hmiSDtUldwYsYTJz87R_O5CrQoMzIXyHkr5HqD9nSaGAfyKpVcXOaF8VpDxDzQp2P0i-Ln6opevOyrsmQ7fS9csDmGqClX426qDCL-Yo_Wa_a4pR_4vcCGKsFKPEjSKBJy1SZht1i1Yx5wba2EPkRQTL9Xoy5x5IdYI7iw6J-kgAeRT5_XZs6uFpSogKttBikYPTlaEr26WxkJv8Wko_RCq"/>
+</div>
+<span class="font-label-caps text-secondary mb-2">THERMAL THERAPY</span>
+<h4 class="font-headline-md text-headline-md mb-3">The Stone Bathing Ritual</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A sequence of heated basalt and chilled marble, designed to restore equilibrium through mineral conductivity.</p>
+</div>
+<!-- Ritual 2 -->
+<div class="ritual-card flex flex-col group">
+<div class="aspect-[3/4] overflow-hidden mb-6 bg-surface-container">
+<img alt="Botanical Ritual" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist and high-end editorial shot of a spa treatment room featuring architectural clay walls and a single ceramic vessel with botanical branches. The lighting is soft and directional, creating elegant shadows. The aesthetic is museum-like and focuses on quiet luxury and botanical stillness using Hijau Nyonya Green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlLpdci3Ce3hQJi8TNFAY9wZx77ByALYprhuCP4iRLUXc4iAcUI0_UY6MoBBRi0-2EU7g5ivK_PbmM0w8_nqM7G31BlOJkYYp7wPOmSAfl12INUhaXoyGLYURafxMwqxiED9q79DhYDfswhCvPvZq7eeYyum5_VeEQxHNTIFoRn_-6pzS7np1kZIJmaY82VrdEEcALMZT7RKZrhDVflGTlwdzQn-dJra86sPEgX1b7hJih8FU2cFjX8vyZ0VuNmI4mopaz3ShvZEnS"/>
+</div>
+<span class="font-label-caps text-secondary mb-2">HERITAGE BOTANICALS</span>
+<h4 class="font-headline-md text-headline-md mb-3">The Hijau Nyonya Clay Wrap</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Utilizing local minerals and heritage greens to detoxify and nourish the skin in a cocoon of warmth.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-20 overflow-hidden bg-surface-container-low">
+<div class="clay-pattern absolute inset-0 z-0"></div>
+<div class="relative z-10 text-center max-w-xl mx-auto">
+<span class="material-symbols-outlined text-outline-variant text-4xl mb-6 block" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Reserve Your Moment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">Our sanctuary concierge is available to curate a bespoke wellness journey tailored to your physical narrative.</p>
+<button class="bg-primary text-on-primary font-label-caps py-6 px-12 tracking-[0.2em] transition-all hover:bg-primary-container active:scale-95 shadow-lg">
+                    INQUIRE FOR A RITUAL
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-primary-container text-on-primary-container border-t border-outline/10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-margin-mobile md:px-margin-desktop py-12 w-full">
+<div class="mb-8 md:mb-0">
+<h4 class="font-display-lg text-headline-md mb-2">SASALLE</h4>
+<p class="font-label-caps text-[10px] opacity-70">© 2024 SASALLE HOTEL. ARCHITECTURAL EXCELLENCE.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all hover:underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all hover:underline underline-offset-4" href="#">Sustainability</a>
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all hover:underline underline-offset-4" href="#">Careers</a>
+<a class="font-body-md text-on-primary-container hover:text-secondary-container transition-all hover:underline underline-offset-4" href="#">Press</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant/20 shadow-sm flex justify-around items-center h-20 pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-caps text-[9px]">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bed">bed</span>
+<span class="font-label-caps text-[9px]">ROOMS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="key">key</span>
+<span class="font-label-caps text-[9px]">KEY</span>
+</a>
+<!-- Active: Concierge (Services/Spa) -->
+<a class="flex flex-col items-center justify-center text-secondary font-bold transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-label-caps text-[9px]">CONCIERGE</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for scrolling
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-4');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.add('py-6');
+                header.classList.remove('py-4');
+            }
+        });
+
+        // Atmospheric effect: Subtle parallax on hero image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('section img');
+            if(heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+    </script>
+</body></html>

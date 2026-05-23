@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-bodoni), "Bodoni Moda", serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  --color-charcoal: #0b0d10;
+  --color-brick: #7a3a2e;
+  --color-terracotta: #a0523d;
+  --color-ivory: #f5f1ea;
+  --color-gold: #b89b5e;
+  --color-smoke: #a7a7a7;
+  --color-hijau: #466557;
+  --color-clay: #86736f;
+
+  --color-primary: #5d241a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #7a3a2e;
+  --color-on-primary-container: #ffa797;
+  --color-secondary: #466557;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #c5e7d6;
+  --color-on-secondary-container: #4a695b;
+  --color-surface: #f9f9fd;
+  --color-on-surface: #1a1c1f;
+  --color-on-surface-variant: #534340;
+  --color-surface-container-low: #f3f3f7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e8e8ec;
+  --color-surface-container-highest: #e2e2e6;
+  --color-outline: #86736f;
+  --color-outline-variant: #d9c1bd;
+  --color-primary-fixed: #ffdad3;
+
+  --spacing-margin-desktop: 80px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-section: 64px;
+  --spacing-max-width: 1440px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    @apply bg-primary/20;
+  }
+}
+
+@layer utilities {
+  .font-label-caps {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .px-margin {
+    padding-left: var(--spacing-margin-mobile);
+    padding-right: var(--spacing-margin-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .px-margin {
+      padding-left: var(--spacing-margin-desktop);
+      padding-right: var(--spacing-margin-desktop);
+    }
+  }
+
+  .clay-breeze-pattern {
+    background-image: radial-gradient(circle, #86736f 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .clay-pattern-subtle {
+    background-image: radial-gradient(#86736f 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+  }
+
+  .stair-offset-even {
+    @apply md:mt-24;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-filled {
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
+}
