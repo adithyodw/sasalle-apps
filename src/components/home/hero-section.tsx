@@ -22,11 +22,11 @@ export function HeroSection({
         alt="SASALLE Hotel"
         fill
         priority
-        className="scale-105 object-cover opacity-90"
+        className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-charcoal/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/25 to-charcoal/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 to-transparent" />
 
       <div className="absolute bottom-0 left-0 right-0 px-margin pb-36 pt-24 md:pb-28">
         <p className="font-label-caps text-gold/90">{established}</p>

@@ -19,16 +19,16 @@ export function DigitalKeyExperience() {
 
   return (
     <div className="relative min-h-[100dvh] bg-charcoal">
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0">
         <LuxuryImage
           src={images.keyAmbience}
           alt=""
           fill
           priority
-          className="object-cover"
+          className="object-cover opacity-50"
           fallbackKey="heroLobby"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/90 to-charcoal" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/85 to-charcoal" />
       </div>
 
       <main className="relative z-10 flex min-h-[100dvh] flex-col px-margin pb-32 pt-28">

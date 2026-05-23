@@ -10,24 +10,37 @@ export const sasalle = {
   clayRoster: "#86736f",
 } as const;
 
-/** Curated Unsplash — reliable CDN, luxury boutique aesthetic */
-const u = (id: string, w = 1920) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=85`;
-
+/**
+ * Production image sources (verified HTTP 200).
+ * Primary: Stitch / Google CDN from original design exports.
+ */
 export const images = {
-  heroLobby: u("photo-1611892440504-42a792e5248b", 2400),
-  materialHonesty: u("photo-1600607687939-ce8a6c25118c", 1200),
-  quietude: u("photo-1631049307264-eada3a226c0", 1200),
-  sanctuary: u("photo-1540555700478-4be289fb82cd", 1920),
-  heritageSuite: u("photo-1590490360182-c33d57733427", 1400),
-  obsidianStudio: u("photo-1595576504738-8f092fdc1c85", 1400),
-  ivoryPavilion: u("photo-1520250497591-112f2f9a3f4a", 1400),
-  spaPool: u("photo-1544161515-4ab6ce6db974", 1920),
-  diningRoom: u("photo-1517248135467-4c7edcad34c4", 1920),
-  staircase: u("photo-1505883887111-139fcc364551", 1400),
-  bathroom: u("photo-1620626011761-996317b8d101", 1200),
-  exterior: u("photo-1564501049412-61c2a3083791", 1920),
-  keyAmbience: u("photo-1600210492490-0946911129ec", 1600),
+  heroLobby:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuACA1bW6pzkHrNaWU7651J1uvHwuF48gcD38-P49yYDemIgPKkZ_boZLkpEwZgqtVyiyDGTR3xcwEXuqt73xpKIKz0TgpQmrj1rQkJq0rjnLnhMPx0RjcTTyyoS1JUA3y7D5cnzOaCpQzhGLNEo0SjqZ4YU4I6jlBblW72d7VkAcs1O8_sPTr4EZ3CeDpIkVSgvtG5-lu29R4EJU6evVVR7jwJxvuoeGxJsUPg2MjDFnJ2Naprb-VmC73Lw3laRIQzq7UbohZ8TdS_R",
+  materialHonesty:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCr4p6em0177fbmUi22y1r_j09M115Qc3c2mLjF70gMCGPLM49jbNZBrBZXN1eNkfk0SEVmsIbvU_yXtTHIUHQ5a-jOkEEwCEmHIJWmoqoNLX1o6OtLMQRO4O2GM-2Z5Q9kam3OSsVCUec47MtsnhghGSguAiZqRhNqVV9NoL6pATEYzYSHdSQ1hpS3i0U74UA7AlV4ejCKKFiqE6xcqZqs1_jnWQyi2f4ofnFkyObCd8vKMnfaGHq_OI8amMdJb_VcN9qfe6cSP1M-",
+  quietude:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAMJOTaYWp6dwSyET66aApi6HbIoGxv9GqWnPaHAvUwnLMAABWv-X9cKglK4Alf9wHsB4vupu9CiWyEk4unTzHoJ5SdJYxUFzKABK-45C9VUysS5PvfHyYZYWhHKJPT9JPHD8PyX88DuP5172ZPO0P7huYzY9BX5qLSDS3Bkjo90WKawZuUO6jjvUp3hkqTKzCLuhjWQz41IhuDbEzt0lNPTW87J5o8ImC7zJHcr1EgVy7s6HwJigj9i8JyRuKyQO0NKyciCkEDvrwQ",
+  sanctuary:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCQZ4mO3yLT_gOaVIbeOYEpdEhKkaseWOj0rkefzKlgiuuw3RFKOC4wv3fcqBZXootVtosMM4kG7orf5FbEx_QD7qS3QeZTHsL81jG4kj7P3yVDBhJFcY3LzLO6Kb-7CJeZ55DRLShR2Gq_vzEMx1uPmr-UYIEfvLRm8IL0z6eHVYpNaTOj4uvzCoVlAu17uUhct_iDyD-rUs7S2Fsub2Z0EKESzkMjnUEyWk9j1EJWT3YoBE74EXxys4WCVdl6p3CYnmD24U4lfW9_",
+  heritageSuite:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBoqw7pgaZjEsdUcRL1t0Phx9fYGCOZEdrud75PWInPwshhE-xNEoXY29oRiOs9z3PWmKrZ5HaPzUJZxEU66Q0x7uIoP9SvIUC26ryQsYz4H_BMkn9XV-g3kgsuA_QxvInY72Ay2XaNWLmVeAoKzIclHVb-DMkqRY7MAW4Gn7ZYD2sT1z2ZTXqrmowCJpgWLG1aaPiOPtm_y8dJzPCcm6TLpQMBe3BMI_XzVW9pKDA5Tq-WvAjeY2CR-uAmFASanH7I4APFITRVrblF",
+  obsidianStudio:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAuVVis-tkIaOPiUz-HtuV9tb6HaY3ehGTHW2c1NNlc1nfC0eGY694Y60dzdPwYUdidP_5atw_Kn6gF8dhC7vIAYaNhd5-JTopFmKNtLMgoj-sRVJLKhbmwdQJvwBM_FleEhHPFGHJ7tf4LF18336JdelRiwiocAALi-7jKxXjAKZQeOjQ8VGqz096xRWA06hlC5Ock_Qyg3FdbxLVvQQFCyebAFgvky1NVSvCW7Jlt7wkwwbI6FPWz1XaAWM9qINV5R4TWkMpZj3PI",
+  ivoryPavilion:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAf7ex9rTQTGXxBCiVG57WxsfAcD8wfMAQBs76IWGbREyXHjFyx2Ql8XSsESYtDg1CrhK9KvfLtb1P9sOyCB5nlSEYdxuTCfu1wlx2AI1EsYs4sRz_VP62-FWvj7HAoA015k_fck-1kNJQOZjjTmpEnuCsdYXPlg9BEkYR58KXzP4hdlexEtDn12Cz06tmKn3271QcljBX88rOsxMcXTXu5tN3TItdKpfamR8tuHU7tYA-5jjNK8chLMnO5rhxhmptR_3U1Fb1i2stD",
+  spaPool:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAIu0BFbmGeuTDKAQzdypncSr-hCBWAZLU0HDCawYVKpikFMawiy_UeClWZAh9sjcud68UEoWi8bii3_jESPdeozDzN2vEJQsEr6b__js1M-_apXI7Jdk0cisV29vKIQ_Fhr4sddZOKd53JrALEcyl9zJ6A2DS8FzxpQWtUSM6Fy-gkVXym5qqJmET2EMAWGQHS2nh6yNnJunzwxb7KUTHxsMNtVJFeYu2_VgJv4fA_s-FGmG-1fmhBWnJJEJz_T2nUnhGtRyxdwhOE",
+  diningRoom:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDkB6TCeS9QAaIWChe7IYfvbuM47yjeswfLA7MGh9iKSsrEbWIOQjwHShJXiw1h4cP1Qj9iW0HbgMxhfjQib5n-10XnA2QpP023iz2JxwjDq_kq4Ve1tNqIbJRvtEAWwY7yQUci7oruVbN-Xjubi_KBrnuZprSkMNBoATWXRYq8CiLaTGC7RrL_5p8noYgakcPW5V2PAww-MbCGI5uXsNcaGj4MZPVrXXmm3wPOiOFd9eVa1LvE0h6wHSZXAuoSf1FbsfR8nPScziVG",
+  staircase:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuACA1bW6pzkHrNaWU7651J1uvHwuF48gcD38-P49yYDemIgPKkZ_boZLkpEwZgqtVyiyDGTR3xcwEXuqt73xpKIKz0TgpQmrj1rQkJq0rjnLnhMPx0RjcTTyyoS1JUA3y7D5cnzOaCpQzhGLNEo0SjqZ4YU4I6jlBblW72d7VkAcs1O8_sPTr4EZ3CeDpIkVSgvtG5-lu29R4EJU6evVVR7jwJxvuoeGxJsUPg2MjDFnJ2Naprb-VmC73Lw3laRIQzq7UbohZ8TdS_R",
+  bathroom:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCr4p6em0177fbmUi22y1r_j09M115Qc3c2mLjF70gMCGPLM49jbNZBrBZXN1eNkfk0SEVmsIbvU_yXtTHIUHQ5a-jOkEEwCEmHIJWmoqoNLX1o6OtLMQRO4O2GM-2Z5Q9kam3OSsVCUec47MtsnhghGSguAiZqRhNqVV9NoL6pATEYzYSHdSQ1hpS3i0U74UA7AlV4ejCKKFiqE6xcqZqs1_jnWQyi2f4ofnFkyObCd8vKMnfaGHq_OI8amMdJb_VcN9qfe6cSP1M-",
+  exterior:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDkB6TCeS9QAaIWChe7IYfvbuM47yjeswfLA7MGh9iKSsrEbWIOQjwHShJXiw1h4cP1Qj9iW0HbgMxhfjQib5n-10XnA2QpP023iz2JxwjDq_kq4Ve1tNqIbJRvtEAWwY7yQUci7oruVbN-Xjubi_KBrnuZprSkMNBoATWXRYq8CiLaTGC7RrL_5p8noYgakcPW5V2PAww-MbCGI5uXsNcaGj4MZPVrXXmm3wPOiOFd9eVa1LvE0h6wHSZXAuoSf1FbsfR8nPScziVG",
+  keyAmbience:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAMJOTaYWp6dwSyET66aApi6HbIoGxv9GqWnPaHAvUwnLMAABWv-X9cKglK4Alf9wHsB4vupu9CiWyEk4unTzHoJ5SdJYxUFzKABK-45C9VUysS5PvfHyYZYWhHKJPT9JPHD8PyX88DuP5172ZPO0P7huYzY9BX5qLSDS3Bkjo90WKawZuUO6jjvUp3hkqTKzCLuhjWQz41IhuDbEzt0lNPTW87J5o8ImC7zJHcr1EgVy7s6HwJigj9i8JyRuKyQO0NKyciCkEDvrwQ",
 } as const;
 
 export type ImageKey = keyof typeof images;
